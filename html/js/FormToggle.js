@@ -11,6 +11,7 @@ export const FormToggle = {
 <label :for="id" class="flex items-center cursor-pointer">
   <input :id="id" type="checkbox" class="peer sr-only"
     :value="props.modelValue"
+    :checked="props.modelValue"
     @input="emit('update:modelValue', $event.target.checked)"
   />
   <span class="block w-[2em] cursor-pointer bg-gray-500 rounded-full 
