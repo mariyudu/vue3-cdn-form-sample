@@ -1,0 +1,19 @@
+/* Vue Transition (ページ切り替え)用スタイル */
+.paging-leave-from {
+  opacity: 1;
+}
+.paging-leave-active {
+  transition: opacity 0.1s linear;
+}
+.paging-leave-to {
+  opacity: 0;
+}
+.paging-enter-from {
+  opacity: 0;
+}
+.paging-enter-active {
+  transition: opacity 0.1s linear 0.1s;
+}
+.paging-enter-to {
+  opacity: 1;
+}
