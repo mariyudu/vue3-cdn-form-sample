@@ -1,15 +1,13 @@
 // トグルスイッチ
 export const FormToggle = {
-  props: { modelValue: Boolean, label: String },
+  props: { id: String, modelValue: Boolean, label: String },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
-    //const id = self.crypto.randomUUID(); // randomUUID() は Chrome 92(2021年)からなのでちょっと怖い
-    const id = Array(10).fill(0).map((x) => '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 62)]).join('');
-    return { props, emit, id }
+    return { props, emit }
   },
   template: `
-<label :for="id" class="flex items-center cursor-pointer">
-  <input :id="id" type="checkbox" class="peer sr-only"
+<label :for="props.id" class="flex items-center cursor-pointer">
+  <input :id="props.id" type="checkbox" class="peer sr-only"
     :value="props.modelValue"
     :checked="props.modelValue"
     @input="emit('update:modelValue', $event.target.checked)"

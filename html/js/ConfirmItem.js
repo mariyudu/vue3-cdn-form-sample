@@ -17,3 +17,4 @@ export const ConfirmItem = {
   <span class="block sm:inline">{{ props.errorMessage }}</span>
 </div>`
 }
+

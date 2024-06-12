@@ -7,3 +7,4 @@ export const FormLabel = {
   template: `
 <label class="block mb-2 text-md text-gray-700 font-bold tracking-wide">{{ props.label }}</label>`
 }
+

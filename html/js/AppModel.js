@@ -49,3 +49,4 @@ export const AppModel = reactive({
     window.removeEventListener('beforeunload', onBeforeunloadHandler, false);
   },
 });
+

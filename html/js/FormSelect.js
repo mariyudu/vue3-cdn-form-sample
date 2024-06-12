@@ -1,6 +1,6 @@
 // フォームドロップダウンリスト
 export const FormSelect = {
-  props: { modelValue: String, options: Array },
+  props: { id: String, modelValue: String, options: Array },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
     return { props, emit };
@@ -8,6 +8,7 @@ export const FormSelect = {
   template: `
 <div class="relative inline-block w-full">
   <select 
+    :id="props.id"
     class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight"
     :value="props.modelValue"
     @change="emit('update:modelValue', $event.target.value)"
@@ -20,3 +21,4 @@ export const FormSelect = {
   </div>
 </div>`
 }
+

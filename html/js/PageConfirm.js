@@ -59,11 +59,11 @@ export const PageConfirm = {
     <confirm-item value="個人情報の取扱いに同意する" />
   </div>
   <div class="flex justify-center items-center gap-4">
-    <button type="button"
+    <button id="confirm-button-back" type="button"
       class="block bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-md py-2 px-4 rounded"
       @click="AppModel.back()"
     >戻る</button>
-    <button type="button"
+    <button id="confirm-button-submit" type="button"
       class="block bg-blue-700 hover:bg-blue-800 disabled:bg-blue-100 text-white text-md py-2 px-4 rounded"
       :disabled="validateErrorCount() > 0"
       @click="AppModel.submit()"
@@ -71,3 +71,4 @@ export const PageConfirm = {
   </div>
 </form>`
 }
+
